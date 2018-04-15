@@ -1,6 +1,5 @@
 /*============    ОБЩИЕ НАСТРОЙКИ    ===========*/
 body {
-	background: #e5e5e5;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -9,7 +8,6 @@ body {
 }
 
 .bubbles {
-	background: #e5e5e5;
 	z-index: -1;
 	position: absolute;
 	top: 0;
@@ -22,8 +20,9 @@ body {
 		display: block;
 		width: 20px;
 		height: 20px;
-		background: rgba(0,0,0,.2);
+		background: rgba(224, 134, 0, 1);
 		animation: animate 25s linear infinite;
+		border-radius: 100%;
 		bottom: 1%;
 		&:nth-child(1) {
 			left: 25%;
@@ -32,7 +31,7 @@ body {
 			animation-delay: 0;
 		}
 		&:nth-child(2) {
-			left: 10%;
+			left: 22%;
 			width: 20px;
 			height: 20px;
 			animation-delay: 2s;
@@ -64,9 +63,9 @@ body {
 			animation-delay: 3s;
 		}
 		&:nth-child(7) {
-			left: 35%;
-			width: 150px;
-			height: 150px;
+			left: 29%;
+			width: 80px;
+			height: 80px;
 			animation-delay: 7s;
 		}
 		&:nth-child(8) {
@@ -84,9 +83,9 @@ body {
 			animation-duration: 25s;
 		}
 		&:nth-child(10) {
-			left: 85%;
-			width: 150px;
-			height: 150px;
+			left: 78%;
+			width: 80px;
+			height: 80px;
 			animation-delay: 0s;
 			animation-duration: 11s;
 		}
@@ -98,13 +97,11 @@ body {
 	{
 		transform: translateY(0) rotate(0deg);
 		opacity: 1;
-		border-radius: 0;
 	}
 	100%
 	{
 		transform: translateY(-1000px) rotate(720deg);
 		opacity: 0;
-		border-radius: 50%;
 	}
 
 }
@@ -124,14 +121,79 @@ body {
 }
 /*============    ГЛАВНАЯ СТРАНИЦА    ===========*/
 
+/*============    ВХОД И РЕГИСТРАЦИЯ    ============*/
+.ID {
+	.autorization {
+		color: #e2e2e2;
+		background-color: #e08600;
+		width: 35px;
+		height: 120px;
+		border-top-left-radius: 50px;
+		border-bottom-left-radius: 50px;
+		position: fixed;
+		right: 0px;
+		bottom: 250px;
+		box-shadow: 0 0 20px black;
+		.text {
+			-moz-transform: rotate(90deg);
+    		-webkit-transform: rotate(90deg);
+    		-o-transform: rotate(90deg);
+    		margin-top: 30px;
+    		font-size: 18pt;
+    		.f_3966;
+		}
+		-moz-transition: all 0.1s 0.02s ease;
+		-o-transition: all 0.1s 0.02s ease;
+		-webkit-transition: all 0.1s 0.02s ease;
+		&:hover {
+			background-color: #ffa922;
+			color: white;
+		}
+	}
+	.registration {
+		color: #e2e2e2;
+		background-color: #009999;
+		height: 210px;
+		width: 35px;
+		bottom: 10px;
+		border-top-left-radius: 50px;
+		border-bottom-left-radius: 50px;
+		position: fixed;
+		right: 0px;
+		box-shadow: 0 0 20px black;
+		.text {
+			-moz-transform: rotate(90deg);
+    		-webkit-transform: rotate(90deg);
+    		-o-transform: rotate(90deg);
+    		margin-top: 32px;
+    		font-size: 18pt;
+    		.f_3966;
+		}
+		-moz-transition: all 0.1s 0.02s ease;
+		-o-transition: all 0.1s 0.02s ease;
+		-webkit-transition: all 0.1s 0.02s ease;
+		&:hover {
+			background-color: #00bcbc;
+			color: white;
+		}
+	}
+}
+
 /*============    ШАПКА    ===========*/
 header {
-	background: #e5e5e5;
-	color: #666;
+	color: #198e25;
 	padding-top: 25px;
 	padding-bottom: 20px;
 	.logotype {
 		border: 1px solid black;
+		h3 {
+			color: #666;
+			font-size: 20pt;
+			margin-bottom: 0;
+		}
+		small {
+			font-size: 10pt;
+		}
 	}
 	.descript {
 		h4 {
@@ -142,16 +204,19 @@ header {
 		}
 	}
 	.phone_num {
+		.f_3966;
 		h3 {
 			margin: 0;
 			font-size: 18pt;
 		}
-		.f_3966;
+		.call {
+			color:#e08600;
+		}
 		a {
-			color: #666;
+			color: #198e25;
 			&:hover {
 				text-decoration: none;
-				color: #ff5151;
+				color: #009999;
 			}
 		}
 	}
@@ -159,8 +224,7 @@ header {
 
 /*============    НАВИГАЦИЯ    ===========*/
 nav {
-	box-shadow: 0 0 15px;
-	background-color: #9EAFAB;
+	background-color: #198e25;
 	ul.list-inline a {
 		font-size: 11pt;
 		color: white;
@@ -172,8 +236,8 @@ nav {
 		-o-transition: all 0.1s 0.02s ease;
 		-webkit-transition: all 0.1s 0.02s ease;
 		&:hover {
-			background-color: #D3D4D4;
-			color: #666;
+			background-color: #e5e5e5;
+			color: #e08600;
 		}
 	}
 	ul.list-inline {
@@ -182,12 +246,28 @@ nav {
 }
 
 /*============    СЕКЦИИ    ===========*/
+section#hint {
+	div {
+		background-color: #e5e5e5;
+		padding: 1px;
+		small {
+			color: #555;
+			margin-left: 10px;
+			font-size: 10pt;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
 section#main {
 	padding: 20px 10px;
 	color: #666;
 	.f_3966;
 	h1 {
 		font-size: 27pt;
+		color: #009999;
 	}
 	h4 {
 		font-size: 19pt;
@@ -202,43 +282,45 @@ section#main {
 }
 
 section#arguments {
-	padding: 20px 10px;
+	background-color: white;
+	padding: 0px 10px;
 	padding-bottom: 0px;
 	.f_3966;
 	margin-top: 20px;
-	background: url(../img/pre_ground.jpg) no-repeat;
-	background-size: cover;
 	.arguments-inner {
 		margin-bottom: 20px;
-		box-shadow: 0 10px 10px;
+		border: 2px solid #198e25;
 		padding: 10px;
-		background-color: white;
+		background: #e5e5e5;
 		height: 250px;
 		h3 {
-			span {
-				background-color: #efefef;
-				padding: 0 5px;
-			}
-
+			color: #198e25;
 		}
 	}
 
 }
 
 section#slider {
-	background: #e5e5e5;
+	.container {
+		border-top: 2px solid #d3d3d3;
+		padding-top: 26px;
+	}
+	.bx-pager-link {
+		background-color: #198e25;
+	}
+	.active {
+		background-color: #e08600;
+	}
 	
 }
 
 section#begin {
-	color: #666;
-	padding: 20px 0;
-	background: url(../img/pre_ground.jpg) no-repeat;
-	background-size: cover;
+	color: #198e25;
+	padding: 4px 0;
 	.video {
-		padding: 0 10px;
+		border-top: 2px solid #d3d3d3;
+		padding: 10px 0px;
 		width: 80%;
-		background-color: #ebedea;
 		h2 {
 			padding: 5px;
 			.f_3966;
@@ -252,13 +334,13 @@ section#begin {
 			text-decoration: none;
 			color: white;
 			.see_courses {
-				background-color: #3f3f3f;
+				background-color: #e08600;
 				padding: 10px;
 				border: 0px solid #3f3f3f;
 				border-radius: 10px;
-				margin: 9px;
+				margin: 9px 0;
 				&:hover {
-					background-color: #5b5b5b;
+					background-color: #ffa922;
 				}
 			}
 		}
@@ -269,11 +351,14 @@ section#begin {
 section#tool {
 	color: #666;
 	padding-bottom: 36px;
-	background: #e5e5e5;
+	.container {
+		border-top: 2px solid #d3d3d3;
+	}
 	h2 {
 		.f_3966;
 		font-size: 20pt;
 		padding: 20px 0 10px 0;
+		color: #198e25;
 	}
 	.row {
 		div {
@@ -297,9 +382,8 @@ section#tool {
 			margin: 0 20px 30px 20px;
 			max-width: 240px;
 			border-radius: 50px;
-			border: 3px solid white;
+			border: 3px solid #198e25;
 			&:hover {
-				border: 3px solid #BCC1B9;
 				.read_more {
 					opacity: 1;	
 				}
@@ -311,6 +395,7 @@ section#tool {
 		h4 {
 			font-size: 15pt;
 			padding: 10px;
+			color: #e08600;
 		}
 		img {
 			position: relative;
@@ -326,72 +411,137 @@ section#tool {
 
 /*============    ФУТЕР    ===========*/
 footer {
-	background-color: #9EAFAB;
-	padding: 20px 0;
+	background-color: #6C6C6C;
+	padding: 50px 0 100px 0;
 	.f_3966;
 	h4 {
-		font-size: 12pt;
+		text-transform: uppercase;
+		font-size: 14pt;
+		color: #DDDDDD;
 	}
 	ul {
-		padding-left: 15px;
-		.phone {
-			font-size: 10pt;
+		a {
+			font-size: 13pt;
+			color: #b2b2b2;
+			&:hover {
+				color: #e2e2e2;
+			}
 		}
+		padding-left: 15px;
 	}
 }
 
 /*============    	КУРСЫ    ===========*/
-
 /*============    ШАПКА    ===========*/
-
 /*============    НАВИГАЦИЯ    ===========*/
-
 /*============    СЕКЦИИ    ===========*/
 section#main_courses {
-	background-color: white;
+	padding: 20px 280px;
 	.container {
 		padding: 20px;
 		.row {
-			.buy_course {
-				max-width: 270px;
-				padding: 0;
-				border: 2px solid #c9c9c9;
-				margin: 20px;
-				background-color: #232323;
-				.read_courses_more {
-					background-color: black;
+			margin-bottom: 30px;
+		}
+		.exp_buy {
+			.f_3966;
+			h1 {
+				font-size: 30pt;
+				text-align: center;
+				.talk {
+					font-size: 27pt;
+				}
+				.colloquy {
+					font-size: 21pt;
+				}
+				.travel {
+					font-size: 23pt;
+				}
+				.start {
+					font-size: 23pt;
+				}
+			}
+			p {
+				font-size: 11pt;
+			}
+			a {
+				text-decoration: none;
+				.purchase {
+					background-color: #198e25;
+					font-size: 15pt;
 					padding: 10px;
-					position: absolute;
-					max-width: 270px;
-					height: 370px;
-					top: 40px;
-					opacity: 0;
-					font-size: 13pt;
+					border-radius: 10px;
+					text-align: center;
 					color: white;
-					word-wrap: break-word;
-					transition: 0.5s;
+					margin-top: 20px;
+					-moz-transition: all 0.1s 0.02s ease;
+					-o-transition: all 0.1s 0.02s ease;
+					-webkit-transition: all 0.1s 0.02s ease;
+					&:hover {
+						background-color: #29c438;
+					}
 				}
-				&:hover {
-					.read_courses_more {
-						opacity: 0.8;
-					} 
-				}
-				button {
-					border-radius: 0;
-					width: 100%;
-					height: 55px;
-					font-size: 18pt;
-				}
-				h4 {
+				.reviews {
+					background-color: #009999;
+					font-size: 15pt;
+					padding: 10px;
+					border-radius: 10px;
+					text-align: center;
 					color: white;
-					padding: 5px;
-					font-size: 16pt;
-					.f_3966;
+					margin-top: 29px;
+					-moz-transition: all 0.1s 0.02s ease;
+					-o-transition: all 0.1s 0.02s ease;
+					-webkit-transition: all 0.1s 0.02s ease;
+					&:hover {
+						background-color: #00bcbc;
+					}
 				}
-				img {
-					height: 370px;
-					width: 100%;
-				}
+			}
+		}
+		.imgCourse {
+			img {
+				border-radius: 5px;
+			}
+		}
+	}
+}
+/*============    ФУТЕР    ===========*/
+
+/*============    ПРЕПОДАВАТЕЛИ    ===========*/
+/*============    ШАПКА    ===========*/
+/*============    НАВИГАЦИЯ    ===========*/
+/*============    СЕКЦИИ    ===========*/
+section#teachers_main {
+	background-color: #e5e5e5;
+	.container {
+		padding: 20px 0;
+	}
+	.row {
+		box-shadow: 0 0 20px;
+		background-color: white;
+		margin-bottom: 40px;
+		padding-top: 7px;
+		.teacher_img {
+			a {
+				font-size: 15pt;
+				text-decoration: none;
+			}
+			img {
+				box-shadow: 0 0 10px;
+				width: 120px;
+				height: 120px;
+				border: 4px solid #198e25;
+			}
+			#orange {
+				border-color: #e08600;
+			}
+		}
+		.teacher_discript {
+			p {
+				font-size: 12pt;
+				.f_3966
+			}
+			hr {
+				border: 0.5px solid #b5b5b5;
 			}
 		}
 	}
@@ -400,6 +550,12 @@ section#main_courses {
 /*============    	АДАПТИВ    ===========*/
 
 @media(min-width:0px) and (max-width:320px) {
+	section#main_courses {
+		padding: 20px 0px;
+		.container {
+			padding: 20px;
+		}
+	}	
 	.arguments-inner {
 		p {
 			font-size: 9pt;
@@ -427,6 +583,12 @@ section#main_courses {
 }
 
 @media(min-width:321px) and (max-width:480px) {
+	section#main_courses {
+		padding: 20px 20px;
+		.container {
+			padding: 20px;
+		}
+	}
 	.arguments-inner {
 		p {
 			font-size: 12pt;
@@ -451,6 +613,12 @@ section#main_courses {
 }
 
 @media(min-width:481px) and (max-width:767px) {
+	section#main_courses {
+		padding: 20px 80px;
+		.container {
+			padding: 20px;
+		}
+	}
 	.arguments-inner {
 			p {
 				font-size: 14pt;
@@ -473,6 +641,19 @@ section#main_courses {
 }
 
 @media(min-width:768px) and (max-width:992px) {
+	section#main_courses {
+		padding: 20px 150px;
+		.container {
+			padding: 20px;
+			.row {
+				h1 {
+					.talk {
+						font-size: 25pt;
+					}
+				}
+			}
+		}
+	}
 	.arguments-inner {
 			p {
 				font-size: 9pt;
@@ -494,6 +675,12 @@ section#main_courses {
 }
 
 @media(min-width:993px) and (max-width:1200px) {
+	section#main_courses {
+		padding: 20px 100px;
+		.container {
+			padding: 20px;
+		}
+	}
 	.arguments-inner {
 			p {
 				font-size: 10pt;
@@ -510,6 +697,12 @@ section#main_courses {
 }
 
 @media(min-width: 1201px) {
+	section#main_courses {
+		padding: 20px 280px;
+		.container {
+			padding: 20px;
+		}
+	}
 	.arguments-inner {
 		p {
 			font-size: 11pt;

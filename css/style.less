@@ -477,7 +477,6 @@ section#main_teachers {
 						}
 					}
 					.btn {
-						width: 100%;
 						padding: 0;	
 						a {
 							font-size: 9pt;
@@ -489,6 +488,12 @@ section#main_teachers {
 							padding: 10px;
 							background-color: #e08600;
 							border-radius: 10px;
+							-moz-transition: all 0.1s 0.02s ease;
+							-o-transition: all 0.1s 0.02s ease;
+							-webkit-transition: all 0.1s 0.02s ease;
+							&:hover {
+								background-color: #ef9921;
+							}
 						}
 						.look {
 							margin-left: 5px;
@@ -496,6 +501,12 @@ section#main_teachers {
 							padding: 10px;
 							background-color: #009999;
 							border-radius: 10px;
+							-moz-transition: all 0.1s 0.02s ease;
+							-o-transition: all 0.1s 0.02s ease;
+							-webkit-transition: all 0.1s 0.02s ease;
+							&:hover {
+								background-color: #00bcbc;
+							}
 						}	
 					}
 				}
@@ -507,6 +518,31 @@ section#main_teachers {
 /*============    	АДАПТИВ    ===========*/
 
 @media(min-width:0px) and (max-width:320px) {
+	section#main_teachers {
+		.container {
+			.row {
+				.profile {
+					.row {
+						.info {
+							width: 100%;
+							h1 {
+								text-align: center;
+							}
+							.btn {
+								.look {
+									margin-left: 0;
+									display: block;
+								}
+								.give {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	section#main_courses {
 		padding: 20px 0px;
 		.container {
@@ -540,6 +576,22 @@ section#main_teachers {
 }
 
 @media(min-width:321px) and (max-width:480px) {
+	section#main_teachers {
+		.container {
+			.row {
+				.profile {
+					.row {
+						.info {
+							width: 100%;
+							h1 {
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	section#main_courses {
 		padding: 20px 20px;
 		.container {
@@ -570,6 +622,22 @@ section#main_teachers {
 }
 
 @media(min-width:481px) and (max-width:767px) {
+	section#main_teachers {
+		.container {
+			.row {
+				.profile {
+					.row {
+						.info {
+							width: 100%;
+							h1 {
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	section#main_courses {
 		padding: 20px 80px;
 		.container {
@@ -598,6 +666,22 @@ section#main_teachers {
 }
 
 @media(min-width:768px) and (max-width:992px) {
+	section#main_teachers {
+		.container {
+			.row {
+				.profile {
+					.row {
+						.info {
+							width: 100%;
+							h1 {
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	section#main_courses {
 		padding: 20px 150px;
 		.container {

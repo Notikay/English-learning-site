@@ -121,64 +121,6 @@ body {
 }
 /*============    ГЛАВНАЯ СТРАНИЦА    ===========*/
 
-/*============    ВХОД И РЕГИСТРАЦИЯ    ============*/
-.ID {
-	.autorization {
-		color: #e2e2e2;
-		background-color: #e08600;
-		width: 35px;
-		height: 120px;
-		border-top-left-radius: 50px;
-		border-bottom-left-radius: 50px;
-		position: fixed;
-		right: 0px;
-		bottom: 250px;
-		box-shadow: 0 0 20px black;
-		.text {
-			-moz-transform: rotate(90deg);
-    		-webkit-transform: rotate(90deg);
-    		-o-transform: rotate(90deg);
-    		margin-top: 30px;
-    		font-size: 18pt;
-    		.f_3966;
-		}
-		-moz-transition: all 0.1s 0.02s ease;
-		-o-transition: all 0.1s 0.02s ease;
-		-webkit-transition: all 0.1s 0.02s ease;
-		&:hover {
-			background-color: #ffa922;
-			color: white;
-		}
-	}
-	.registration {
-		color: #e2e2e2;
-		background-color: #009999;
-		height: 210px;
-		width: 35px;
-		bottom: 10px;
-		border-top-left-radius: 50px;
-		border-bottom-left-radius: 50px;
-		position: fixed;
-		right: 0px;
-		box-shadow: 0 0 20px black;
-		.text {
-			-moz-transform: rotate(90deg);
-    		-webkit-transform: rotate(90deg);
-    		-o-transform: rotate(90deg);
-    		margin-top: 32px;
-    		font-size: 18pt;
-    		.f_3966;
-		}
-		-moz-transition: all 0.1s 0.02s ease;
-		-o-transition: all 0.1s 0.02s ease;
-		-webkit-transition: all 0.1s 0.02s ease;
-		&:hover {
-			background-color: #00bcbc;
-			color: white;
-		}
-	}
-}
-
 /*============    ШАПКА    ===========*/
 header {
 	color: #198e25;
@@ -510,38 +452,53 @@ section#main_courses {
 /*============    ШАПКА    ===========*/
 /*============    НАВИГАЦИЯ    ===========*/
 /*============    СЕКЦИИ    ===========*/
-section#teachers_main {
-	background-color: #e5e5e5;
+section#main_teachers {
 	.container {
-		padding: 20px 0;
-	}
-	.row {
-		box-shadow: 0 0 20px;
-		background-color: white;
-		margin-bottom: 40px;
-		padding-top: 7px;
-		.teacher_img {
-			a {
-				font-size: 15pt;
-				text-decoration: none;
-			}
-			img {
-				box-shadow: 0 0 10px;
-				width: 120px;
-				height: 120px;
-				border: 4px solid #198e25;
-			}
-			#orange {
-				border-color: #e08600;
-			}
-		}
-		.teacher_discript {
-			p {
-				font-size: 12pt;
-				.f_3966
-			}
-			hr {
-				border: 0.5px solid #b5b5b5;
+		.f_3966;
+		.row {
+			.profile {
+				padding: 20px 0;
+				.image {
+					padding: 0;
+					img {
+						width: 200px;
+					}
+				}
+				.info {
+					padding: 10px 0px;
+					h1 {
+						font-size: 20pt;
+					}
+					ul {
+						padding: 0;
+						li {
+							font-size: 11pt;
+							list-style-type: none;
+						}
+					}
+					.btn {
+						width: 100%;
+						padding: 0;	
+						a {
+							font-size: 9pt;
+							color: white;
+							text-decoration: none;
+						}
+						.give {
+							margin-top: 5px;
+							padding: 10px;
+							background-color: #e08600;
+							border-radius: 10px;
+						}
+						.look {
+							margin-left: 5px;
+							margin-top: 5px;
+							padding: 10px;
+							background-color: #009999;
+							border-radius: 10px;
+						}	
+					}
+				}
 			}
 		}
 	}
